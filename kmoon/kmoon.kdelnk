@@ -1,15 +1,15 @@
 # KDE Config File
 [KDE Desktop Entry]
 Comment=Moon Phase Indicator
-Comment[pt_BR]=Indicador de Fases da Lua
-Comment[es]=Indicador de Fase Lunar
 Comment[de]=zeigt die Mondphasen im Panel an
+Comment[es]=Indicador de Fase Lunar
 Comment[fi]=Kuunvaiheennäyttäjä
+Comment[pt_BR]=Indicador de Fases da Lua
 Name=MoonPhase
-Name[pt_BR]=Fase Lunar
-Name[es]=Fase Lunar
 Name[de]=Mond
+Name[es]=Fase Lunar
 Name[fi]=Kuunvaihe
+Name[pt_BR]=Fase Lunar
 Exec=kmoon
 Icon=kmoon.xpm
 Type=Application
