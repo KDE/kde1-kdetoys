@@ -2,7 +2,7 @@
 bin_PROGRAMS = kmoon
 
 kmoon_LDFLAGS = $(all_libraries) $(KDE_RPATH)
-kmoon_LDADD = -lkdeui -lkdecore  -lXext  -lm $(LIB_QT)
+kmoon_LDADD =       -lm $(LIB_KDEUI)
 kmoon_SOURCES = kmoon.cpp phases.cpp
 noinst_HEADERS = kmoon.h
 
