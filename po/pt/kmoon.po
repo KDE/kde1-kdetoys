@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kmoon\n"
+"POT-Creation-Date: 1998-06-18 22:51+0200\n"
+"PO-Revision-Date: 1998-03-25 20:00+0000\n"
+"Last-Translator: Pedro Morais <pmmm@camoes.rnl.ist.utl.pt>\n"
+
+#: kmoon.cpp:111
+msgid "About Moon Phase Indicator"
+msgstr "Acerca do Indicar de Fase Lunar"
+
+#: kmoon.cpp:112
+msgid ""
+"Moon Phase Indicator for KDE\n"
+"\n"
+"Written by Stephan Kulow <coolo@kde.org>\n"
+"\n"
+"Lunar code by Chris Osburn <chris@speakeasy.org>\n"
+"\n"
+"Moon graphics by Tim Beauchamp <timb@googol.com>"
+msgstr ""
+"Indicador de Fase Lunar para KDE\n"
+"\n"
+"Escrito por Stephan Kulow <coolo@kde.org>\n"
+"\n"
+"Código lunar por Chris Osburn <chris@speakeasy.org>\n"
+"\n"
+"Gráficos lunares por Tim Beauchamp <timb@googol.com>"
+
+#: kmoon.cpp:175
+#, c-format
+msgid "Moon is %d days old."
+msgstr "Lua tem %d dias de idade."
