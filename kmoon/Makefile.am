@@ -26,7 +26,7 @@ uninstall-local:
 	-rm -f $(kde_minidir)/kmoon.xpm
 	-rm -f $(kde_icondir)/large/kmoon.xpm
 
-SUBDIRS = pics icons
+SUBDIRS = pics
 
 messages:
 	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kmoon_SOURCES) && mv messages.po ../po/kmoon.pot
