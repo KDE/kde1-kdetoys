@@ -1,15 +1,9 @@
 # Generated automatically from Makefile.in by configure.
-# Makefile.in generated automatically by automake 1.3 from Makefile.am
+# Makefile.in generated automatically by automake 1.2 from Makefile.am
 
-# Copyright (C) 1994, 1995, 1996, 1997, 1998 Free Software Foundation, Inc.
+# Copyright (C) 1994, 1995, 1996, 1997 Free Software Foundation, Inc.
 # This Makefile.in is free software; the Free Software Foundation
-# gives unlimited permission to copy and/or distribute it,
-# with or without modifications, as long as this notice is preserved.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY, to the extent permitted by law; without
-# even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.
+# gives unlimited permission to copy, distribute and modify it.
 
 # this 10 paths are KDE specific. Use them:
 # kde_htmldir       Where your docs should go to. (contains lang subdirs)
@@ -31,10 +25,10 @@ SHELL = /bin/sh
 
 srcdir = .
 top_srcdir = ..
-prefix = /home/coolo/prod/kde
+prefix = /home/kulow/prod/KDE
 exec_prefix = ${prefix}
 
-bindir = /home/coolo/prod/kde/bin
+bindir = /home/kulow/prod/KDE/bin
 sbindir = ${exec_prefix}/sbin
 libexecdir = ${exec_prefix}/libexec
 datadir = ${prefix}/share
@@ -47,8 +41,6 @@ mandir = ${prefix}/man
 includedir = ${prefix}/include
 oldincludedir = /usr/include
 
-DISTDIR =
-
 pkgdatadir = $(datadir)/kdenonbeta
 pkglibdir = $(libdir)/kdenonbeta
 pkgincludedir = $(includedir)/kdenonbeta
@@ -60,36 +52,36 @@ AUTOCONF = autoconf
 AUTOMAKE = automake
 AUTOHEADER = autoheader
 
-INSTALL = /usr/bin/install -c
+INSTALL = /home/kulow/bin/install -c
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_SCRIPT = ${INSTALL_PROGRAM}
 transform = s,x,x,
 
-NORMAL_INSTALL = :
-PRE_INSTALL = :
-POST_INSTALL = :
-NORMAL_UNINSTALL = :
-PRE_UNINSTALL = :
-POST_UNINSTALL = :
-build_alias = i586-pc-linux-gnu
-build_triplet = i586-pc-linux-gnu
-host_alias = i586-pc-linux-gnu
-host_triplet = i586-pc-linux-gnu
-target_alias = i586-pc-linux-gnu
-target_triplet = i586-pc-linux-gnu
+NORMAL_INSTALL = true
+PRE_INSTALL = true
+POST_INSTALL = true
+NORMAL_UNINSTALL = true
+PRE_UNINSTALL = true
+POST_UNINSTALL = true
+build_alias = sparc-sun-solaris2.6
+build_triplet = sparc-sun-solaris2.6
+host_alias = sparc-sun-solaris2.6
+host_triplet = sparc-sun-solaris2.6
+target_alias = sparc-sun-solaris2.6
+target_triplet = sparc-sun-solaris2.6
 CC = gcc
 CPP = gcc -E
 CXX = g++
 GLINC = @GLINC@
 GLLIB = @GLLIB@
-GMSGFMT = /home/coolo/bin/msgfmt
+GMSGFMT = /home/kulow/bin/msgfmt
 IDL = @IDL@
 KDE_EXTRA_RPATH = 
-KDE_INCLUDES = -I/home/coolo/prod/kde/include
-KDE_LDFLAGS = -L/home/coolo/prod/kde/lib
-KDE_RPATH = -rpath $(kde_libraries) -rpath $(qt_libraries) -rpath $(x_libraries)
-LD = /usr/bin/ld
+KDE_INCLUDES = -I/home/kulow/prod/KDE/include
+KDE_LDFLAGS = -L/home/kulow/prod/KDE/lib
+KDE_RPATH = -rpath $(kde_libraries) -rpath $(qt_libraries)
+LD = /usr/ccs/bin/ld
 LIBBSD = 
 LIBCOMPAT = 
 LIBCRYPT = -lcrypt
@@ -97,61 +89,71 @@ LIBDL = @LIBDL@
 LIBJPEG = -ljpeg
 LIBMICO = @LIBMICO@
 LIBOBJS = @LIBOBJS@
+LIBPNG = @LIBPNG@
 LIBPTHREAD = @LIBPTHREAD@
 LIBPYTHON = @LIBPYTHON@
 LIBQIMGIO = @LIBQIMGIO@
-LIBSOCKET = 
-LIBTOOL = $(SHELL) $(top_builddir)/libtool
+LIBSOCKET = -lsocket  -lnsl
+LIBTIFF = @LIBTIFF@
+LIBTOOL = $(SHELL) $(top_builddir)/libtool --silent
 LIBUCB = 
+LIBZ = @LIBZ@
+LIB_KDECORE = -lkdecore -lXext $(LIB_QT)
+LIB_KDEUI = -lkdeui $(LIB_KDECORE)
+LIB_KFILE = -lkfile $(LIB_KFM) $(LIB_KDEUI)
+LIB_KFM = -lkfm $(LIB_KDECORE)
+LIB_KHTMLW = @LIB_KHTMLW@
+LIB_KIMGIO = @LIB_KIMGIO@
+LIB_QT = -lqt $(LIB_X11)
+LIB_X11 = -lX11 $(LIBSOCKET)
 LN_S = ln -s
 MAKEINFO = makeinfo
 MICO_INCLUDES = @MICO_INCLUDES@
 MICO_LDFLAGS = @MICO_LDFLAGS@
-MOC = /home/coolo/prod/qt/bin/moc
-MSGFMT = /home/coolo/bin/msgfmt
-NM = /usr/bin/nm -B
+MOC = /home/kulow/prod/qt/bin/moc
+MSGFMT = /home/kulow/bin/msgfmt
+NM = /usr/ccs/bin/nm -p
 PACKAGE = kdenonbeta
 PAMINC = @PAMINC@
 PAMLIBPATHS = @PAMLIBPATHS@
 PAMLIBS = @PAMLIBS@
 PYTHONINC = @PYTHONINC@
 PYTHONLIB = @PYTHONLIB@
-QT_INCLUDES = -I/home/coolo/prod/qt/include
-QT_LDFLAGS = -L/home/coolo/prod/qt/lib
+QT_INCLUDES = -I/home/kulow/prod/qt/include
+QT_LDFLAGS = -L/home/kulow/prod/qt/lib
 RANLIB = ranlib
-TOPSUBDIRS =  kmoon kworldwatch mouse po
 USE_NLS = yes
 VERSION = 0.1
-XGETTEXT = /home/coolo/bin/xgettext
+XGETTEXT = /home/kulow/bin/xgettext
 XPMINC = @XPMINC@
 XPMLIB = @XPMLIB@
-X_EXTRA_LIBS = 
-X_INCLUDES = -I/usr/X11R6/include
-X_LDFLAGS = -L/usr/X11R6/lib
-all_includes = -I/home/coolo/prod/kde/include -I/home/coolo/prod/qt/include -I/usr/X11R6/include
-all_libraries = -L/home/coolo/prod/kde/lib -L/home/coolo/prod/qt/lib -L/usr/X11R6/lib
+X_EXTRA_LIBS = -lsocket  -lnsl
+X_INCLUDES = 
+X_LDFLAGS = 
+all_includes = -I/home/kulow/prod/KDE/include -I/home/kulow/prod/qt/include  
+all_libraries = -L/home/kulow/prod/KDE/lib -L/home/kulow/prod/qt/lib  
 install_root = 
-kde_appsdir = /home/coolo/prod/kde/share/applnk
-kde_bindir = /home/coolo/prod/kde/bin
-kde_cgidir = /home/coolo/prod/kde/cgi-bin
-kde_confdir = /home/coolo/prod/kde/share/config
-kde_datadir = /home/coolo/prod/kde/share/apps
-kde_htmldir = /home/coolo/prod/kde/share/doc/HTML
-kde_icondir = /home/coolo/prod/kde/share/icons
-kde_includes = /home/coolo/prod/kde/include
-kde_libraries = /home/coolo/prod/kde/lib
-kde_locale = /home/coolo/prod/kde/share/locale
-kde_mimedir = /home/coolo/prod/kde/share/mimelnk
-kde_minidir = /home/coolo/prod/kde/share/icons/mini
-kde_partsdir = /home/coolo/prod/kde/parts
-kde_sounddir = /home/coolo/prod/kde/share/sounds
-kde_toolbardir = /home/coolo/prod/kde/share/toolbar
-kde_wallpaperdir = /home/coolo/prod/kde/share/wallpapers
-qt_includes = /home/coolo/prod/qt/include
-qt_libraries = /home/coolo/prod/qt/lib
-topdir = /home/coolo/prod/kdetoys
-x_includes = /usr/X11R6/include
-x_libraries = /usr/X11R6/lib
+kde_appsdir = /home/kulow/prod/KDE/share/applnk
+kde_bindir = /home/kulow/prod/KDE/bin
+kde_cgidir = /home/kulow/prod/KDE/cgi-bin
+kde_confdir = /home/kulow/prod/KDE/share/config
+kde_datadir = /home/kulow/prod/KDE/share/apps
+kde_htmldir = /home/kulow/prod/KDE/share/doc/HTML
+kde_icondir = /home/kulow/prod/KDE/share/icons
+kde_includes = /home/kulow/prod/KDE/include
+kde_libraries = /home/kulow/prod/KDE/lib
+kde_locale = /home/kulow/prod/KDE/share/locale
+kde_mimedir = /home/kulow/prod/KDE/share/mimelnk
+kde_minidir = /home/kulow/prod/KDE/share/icons/mini
+kde_partsdir = /home/kulow/prod/KDE/parts
+kde_sounddir = /home/kulow/prod/KDE/share/sounds
+kde_toolbardir = /home/kulow/prod/KDE/share/toolbar
+kde_wallpaperdir = /home/kulow/prod/KDE/share/wallpapers
+qt_includes = /home/kulow/prod/qt/include
+qt_libraries = /home/kulow/prod/qt/lib
+topdir = /home/cvs/prod/kdetoys
+x_includes = .
+x_libraries = /usr/lib
 
 APPSDIR = $(kde_appsdir)/Utilities
 # set the include path for X, qt and KDE
@@ -193,11 +195,11 @@ PROGRAMS =  $(bin_PROGRAMS)
 
 DEFS = -DHAVE_CONFIG_H -I. -I$(srcdir) -I..
 CPPFLAGS = 
-LDFLAGS = 
+LDFLAGS = -s
 LIBS = 
 kodo_OBJECTS =  kodo.o kimgnum.o gridbag.o gridbag.moc.o kimgnum.moc.o kodo.moc.o 
 kodo_DEPENDENCIES = 
-CXXFLAGS = -g -Wall
+CXXFLAGS = -O2 -Wall
 CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
 LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
 CXXLINK = $(LIBTOOL) --mode=link $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@
@@ -212,20 +214,18 @@ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
 
 TAR = tar
 GZIP = --best
-DEP_FILES =  .deps/gridbag.P .deps/kimgnum.P .deps/kodo.P
-CXXMKDEP = $(CXX) -M $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
 SOURCES = $(kodo_SOURCES)
 OBJECTS = $(kodo_OBJECTS)
 
-all: Makefile $(PROGRAMS) $(DATA) $(HEADERS)
+default: all
 
 .SUFFIXES:
-.SUFFIXES: .S .c .cpp .lo .o .s
-$(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4)
-	cd $(top_srcdir) && $(AUTOMAKE) --gnu mouse/Makefile
-	perl $(top_builddir)/automoc /home/coolo/prod/kdetoys/mouse/Makefile.in
+.SUFFIXES: .c .cpp .lo .o
+$(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+	cd $(top_srcdir) && $(AUTOMAKE) --foreign --include-deps mouse/Makefile
+	perl $(top_builddir)/automoc /home/cvs/prod/kdetoys/mouse/Makefile.in
 
-Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status $(BUILT_SOURCES)
+Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	cd $(top_builddir) \
 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
@@ -233,7 +233,7 @@ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status $(BUILT_SOURCES)
 mostlyclean-binPROGRAMS:
 
 clean-binPROGRAMS:
-	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+	test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
 
 distclean-binPROGRAMS:
 
@@ -241,47 +241,41 @@ maintainer-clean-binPROGRAMS:
 
 install-binPROGRAMS: $(bin_PROGRAMS)
 	@$(NORMAL_INSTALL)
-	$(mkinstalldirs) $(DESTDIR)$(bindir)
+	$(mkinstalldirs) $(bindir)
 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
 	  if test -f $$p; then \
-	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
-	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p|sed '$(transform)'`"; \
+	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p|sed '$(transform)'`; \
 	  else :; fi; \
 	done
 
 uninstall-binPROGRAMS:
-	@$(NORMAL_UNINSTALL)
+	$(NORMAL_UNINSTALL)
 	list='$(bin_PROGRAMS)'; for p in $$list; do \
-	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+	  rm -f $(bindir)/`echo $$p|sed '$(transform)'`; \
 	done
 
-.s.o:
-	$(COMPILE) -c $<
-
-.S.o:
+.c.o:
 	$(COMPILE) -c $<
 
 mostlyclean-compile:
-	-rm -f *.o core *.core
+	rm -f *.o core
 
 clean-compile:
 
 distclean-compile:
-	-rm -f *.tab.c
+	rm -f *.tab.c
 
 maintainer-clean-compile:
 
-.s.lo:
-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
-
-.S.lo:
+.c.lo:
 	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
 
 mostlyclean-libtool:
-	-rm -f *.lo
+	rm -f *.lo
 
 clean-libtool:
-	-rm -rf .libs _libs
+	rm -rf .libs
 
 distclean-libtool:
 
@@ -297,45 +291,40 @@ kodo: $(kodo_OBJECTS) $(kodo_DEPENDENCIES)
 
 install-docDATA: $(doc_DATA)
 	@$(NORMAL_INSTALL)
-	$(mkinstalldirs) $(DESTDIR)$(docdir)
+	$(mkinstalldirs) $(docdir)
 	@list='$(doc_DATA)'; for p in $$list; do \
 	  if test -f $(srcdir)/$$p; then \
-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(docdir)/$$p"; \
-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(docdir)/$$p; \
+	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(docdir)/$$p"; \
+	    $(INSTALL_DATA) $(srcdir)/$$p $(docdir)/$$p; \
 	  else if test -f $$p; then \
-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(docdir)/$$p"; \
-	    $(INSTALL_DATA) $$p $(DESTDIR)$(docdir)/$$p; \
+	    echo " $(INSTALL_DATA) $$p $(docdir)/$$p"; \
+	    $(INSTALL_DATA) $$p $(docdir)/$$p; \
 	  fi; fi; \
 	done
 
 uninstall-docDATA:
-	@$(NORMAL_UNINSTALL)
+	$(NORMAL_UNINSTALL)
 	list='$(doc_DATA)'; for p in $$list; do \
-	  rm -f $(DESTDIR)$(docdir)/$$p; \
+	  rm -f $(docdir)/$$p; \
 	done
 
 tags: TAGS
 
-ID: $(HEADERS) $(SOURCES) $(LISP)
-	here=`pwd` && cd $(srcdir) \
-	  && mkid -f$$here/ID $(SOURCES) $(HEADERS) $(LISP)
+ID: $(HEADERS) $(SOURCES)
+	here=`pwd` && cd $(srcdir) && mkid -f$$here/ID $(SOURCES) $(HEADERS)
 
-TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) $(LISP)
+TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES)
 	tags=; \
 	here=`pwd`; \
-	list='$(SOURCES) $(HEADERS)'; \
-	unique=`for i in $$list; do echo $$i; done | \
-	  awk '    { files[$$0] = 1; } \
-	       END { for (i in files) print i; }'`; \
-	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
-	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $$unique $(LISP) -o $$here/TAGS)
+	test -z "$(ETAGS_ARGS)$(SOURCES)$(HEADERS)$$tags" \
+	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $(SOURCES) $(HEADERS) -o $$here/TAGS)
 
 mostlyclean-tags:
 
 clean-tags:
 
 distclean-tags:
-	-rm -f TAGS ID
+	rm -f TAGS ID
 
 maintainer-clean-tags:
 
@@ -344,52 +333,12 @@ distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
 subdir = mouse
 
 distdir: $(DISTFILES)
-	here=`cd $(top_builddir) && pwd`; \
-	top_distdir=`cd $(top_distdir) && pwd`; \
-	distdir=`cd $(distdir) && pwd`; \
-	cd $(top_srcdir) \
-	  && $(AUTOMAKE) --include-deps --build-dir=$$here --srcdir-name=$(top_srcdir) --output-dir=$$top_distdir --gnu mouse/Makefile
 	@for file in $(DISTFILES); do \
 	  d=$(srcdir); \
 	  test -f $(distdir)/$$file \
 	  || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
 	  || cp -p $$d/$$file $(distdir)/$$file; \
 	done
-
-DEPS_MAGIC := $(shell mkdir .deps > /dev/null 2>&1 || :)
-
--include $(DEP_FILES)
-
-mostlyclean-depend:
-
-clean-depend:
-
-distclean-depend:
-
-maintainer-clean-depend:
-	-rm -rf .deps
-
-%.o: %.c
-	@echo '$(COMPILE) -c $<'; \
-	$(COMPILE) -Wp,-MD,.deps/$(*F).P -c $<
-
-%.lo: %.c
-	@echo '$(LTCOMPILE) -c $<'; \
-	$(LTCOMPILE) -Wp,-MD,.deps/$(*F).p -c $<
-	@-sed -e 's/^\([^:]*\)\.o:/\1.lo \1.o:/' \
-	  < .deps/$(*F).p > .deps/$(*F).P
-	@-rm -f .deps/$(*F).p
-
-%.o: %.cpp
-	@echo '$(CXXCOMPILE) -c $<'; \
-	$(CXXCOMPILE) -Wp,-MD,.deps/$(*F).P -c $<
-
-%.lo: %.cpp
-	@echo '$(LTCXXCOMPILE) -c $<'; \
-	$(LTCXXCOMPILE) -Wp,-MD,.deps/$(*F).p -c $<
-	@-sed -e 's/^\([^:]*\)\.o:/\1.lo \1.o:/' \
-	  < .deps/$(*F).p > .deps/$(*F).P
-	@-rm -f .deps/$(*F).p
 info:
 dvi:
 check: all
@@ -406,53 +355,53 @@ install: install-exec install-data all
 
 uninstall: uninstall-binPROGRAMS uninstall-docDATA uninstall-local
 
+all: Makefile $(PROGRAMS) $(DATA) $(HEADERS)
+
 install-strip:
 	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
 installdirs:
-	$(mkinstalldirs)  $(DATADIR)$(bindir) $(DATADIR)$(docdir)
+	$(mkinstalldirs)  $(bindir) $(docdir)
 
 
 mostlyclean-generic:
-	-test -z "$(MOSTLYCLEANFILES)" || rm -f $(MOSTLYCLEANFILES)
+	test -z "$(MOSTLYCLEANFILES)" || rm -f $(MOSTLYCLEANFILES)
 
 clean-generic:
-	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
+	test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
 
 distclean-generic:
-	-rm -f Makefile $(DISTCLEANFILES)
-	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
-	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
+	rm -f Makefile $(DISTCLEANFILES)
+	rm -f config.cache config.log stamp-h stamp-h[0-9]*
+	test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
 
 maintainer-clean-generic:
-	-test -z "$(MAINTAINERCLEANFILES)" || rm -f $(MAINTAINERCLEANFILES)
-	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
+	test -z "$(MAINTAINERCLEANFILES)" || rm -f $(MAINTAINERCLEANFILES)
+	test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
 mostlyclean:  mostlyclean-binPROGRAMS mostlyclean-compile \
-		mostlyclean-libtool mostlyclean-tags mostlyclean-depend \
+		mostlyclean-libtool mostlyclean-tags \
 		mostlyclean-generic
 
 clean:  clean-binPROGRAMS clean-compile clean-libtool clean-tags \
-		clean-depend clean-generic mostlyclean
+		clean-generic mostlyclean
 
 distclean:  distclean-binPROGRAMS distclean-compile distclean-libtool \
-		distclean-tags distclean-depend distclean-generic clean
-	-rm -f config.status
-	-rm -f libtool
+		distclean-tags distclean-generic clean
+	rm -f config.status
+	rm -f libtool
 
 maintainer-clean:  maintainer-clean-binPROGRAMS maintainer-clean-compile \
 		maintainer-clean-libtool maintainer-clean-tags \
-		maintainer-clean-depend maintainer-clean-generic \
-		distclean
+		maintainer-clean-generic distclean
 	@echo "This command is intended for maintainers to use;"
 	@echo "it deletes files that may require special tools to rebuild."
 
-.PHONY: mostlyclean-binPROGRAMS distclean-binPROGRAMS clean-binPROGRAMS \
-maintainer-clean-binPROGRAMS uninstall-binPROGRAMS install-binPROGRAMS \
-mostlyclean-compile distclean-compile clean-compile \
+.PHONY: default mostlyclean-binPROGRAMS distclean-binPROGRAMS \
+clean-binPROGRAMS maintainer-clean-binPROGRAMS uninstall-binPROGRAMS \
+install-binPROGRAMS mostlyclean-compile distclean-compile clean-compile \
 maintainer-clean-compile mostlyclean-libtool distclean-libtool \
 clean-libtool maintainer-clean-libtool uninstall-docDATA \
 install-docDATA tags mostlyclean-tags distclean-tags clean-tags \
-maintainer-clean-tags distdir mostlyclean-depend distclean-depend \
-clean-depend maintainer-clean-depend info dvi installcheck install-exec \
+maintainer-clean-tags distdir info dvi installcheck install-exec \
 install-data install uninstall all installdirs mostlyclean-generic \
 distclean-generic clean-generic maintainer-clean-generic clean \
 mostlyclean distclean maintainer-clean
