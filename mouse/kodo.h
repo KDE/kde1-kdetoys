@@ -110,6 +110,7 @@ public:
     const int speedSamples=10;
     
     Kodometer(QWidget* ,const char* );
+    ~Kodometer() {}
     void refresh(void);
     void readSettings(void);
     void saveSettings(void);
