@@ -17,16 +17,16 @@
  *   along with this program; if not, write to the Free Software
  *   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  *
- */  
+ */
 
 #include <kapp.h>
 #include <qwidget.h>
 #include "kmoon.moc"
 #include <kwm.h>
-#include <qwmatrix.h> 
+#include <qwmatrix.h>
 #include <qbitmap.h>
-#include <qtooltip.h> 
-#include <kmsgbox.h> 
+#include <qtooltip.h>
+#include <kmsgbox.h>
 #include <qimage.h>
 #include <stdlib.h>
 
@@ -40,7 +40,7 @@ MoonWidget::MoonWidget(QWidget *parent, const char *name)
 {
     struct tm * t;
     time_t clock;
-    
+
     if (!moons)
 	loadMoons();
     counter = -1;
@@ -57,9 +57,9 @@ MoonWidget::MoonWidget(QWidget *parent, const char *name)
     popup->insertItem(i18n("About"));
     popup->insertSeparator();
     popup->insertItem(i18n("Quit"));
-    
+
     connect(popup, SIGNAL(activated(int)), SLOT(reactOn(int)));
-    
+
 }
 
 void MoonWidget::reactOn(int index)
@@ -73,11 +73,11 @@ void MoonWidget::reactOn(int index)
 void MoonWidget::calcStatus( time_t time )
 {
     double JDE;
-    uint lun = 0; 
+    uint lun = 0;
     struct tm event_date;
     struct tm last_event;
     time_t last_new, next_new;
-    
+
     do {
 	last_event = event_date;
 	JDE = moonphasebylunation(lun, 0);
@@ -85,7 +85,7 @@ void MoonWidget::calcStatus( time_t time )
 	last_new = JDtoDate(JDE, &event_date);
 	lun++;
     } while (last_new < time);
-    
+
     counter = (time - next_new) / ( 60 * 60 * 24);
     if (counter >= 29)
 	counter -= 29;
@@ -94,11 +94,11 @@ void MoonWidget::calcStatus( time_t time )
 void MoonWidget::loadMoons()
 {
     moons = new QList<QImage>();
-    
+
     for (int i = 1; i <= 29; i++) {
 	QString name;
-	name.sprintf("%s/kmoon/pics/moon%d.gif", 
-		     KApplication::kde_datadir().data(), 
+	name.sprintf("%s/kmoon/pics/moon%d.gif",
+		     KApplication::kde_datadir().data(),
 		     i);
 	QImage *p = new QImage(name);
 	moons->append(p);
@@ -142,7 +142,7 @@ void MoonWidget::resizeEvent( QResizeEvent *)
     repaint();
 }
 
-void MoonWidget::renderGraphic() 
+void MoonWidget::renderGraphic()
 {
     if (old_counter == counter && old_w == width() && old_h == height())
 	return;
@@ -155,33 +155,33 @@ void MoonWidget::renderGraphic()
     m.scale(float(width()) / t.width(),
 	    float(height()) / t.height());
     QImage im = t.xForm(m).convertToImage().convertDepth(8, AvoidDither);
-    
+
     QColor col1 = yellow;
     QColor col2 = kapp->backgroundColor;
-    
+
     int r1 = col1.red(), r2 = col2.red();
     int g1 = col1.green(), g2 = col2.green();
     int b1 = col1.blue(), b2 = col2.blue();
-    
+
     for (int i = 0; i < im.numColors(); i++) {
 	int grey = qRed(im.color(i));
 	im.setColor(i, qRgb(int(float(r1 - r2) / 255 * grey) + r2,
-			    int(float(g1 - g2) / 255 * grey) + g2, 
+			    int(float(g1 - g2) / 255 * grey) + g2,
 			    int(float(b1 - b2) / 255 * grey) + b2));
     }
-    pixmap.convertFromImage(im, AvoidDither); 
+    pixmap.convertFromImage(im, AvoidDither);
 
     QToolTip::remove(this);
     tooltip.sprintf(i18n("Moon is %d days old."), counter + 1);
     QToolTip::add(this, tooltip);
 }
 
-void MoonWidget::mousePressEvent( QMouseEvent *e) 
+void MoonWidget::mousePressEvent( QMouseEvent *e)
 {
     if (e->button() == RightButton) {
 	popup->popup(mapToGlobal(e->pos()));
 	popup->exec();
-    } 
+    }
     if (e->button() == LeftButton) {
 	showAbout();
     }
@@ -191,6 +191,8 @@ int main( int argc, char **argv)
 {
     KApplication a(argc, argv);
     MoonWidget *moon = new MoonWidget();
+    kapp->enableSessionManagement( TRUE );
+    kapp->setTopWidget(new QWidget);
     a.setMainWidget(moon);
     moon->show();
     if (argc > 1)
