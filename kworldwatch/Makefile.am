@@ -16,12 +16,16 @@ kde_icon_DATA = kworldwatch.xpm
 
 install-data-local:
 	$(mkinstalldirs) $(kde_minidir)
+	$(mkinstalldirs) $(kde_icondir)
+	$(mkinstalldirs) $(kde_icondir)/large
 	$(INSTALL_DATA) $(srcdir)/mini-kworldwatch.xpm $(kde_minidir)/kworldwatch.xpm
+	$(INSTALL_DATA) $(srcdir)/large-kworldwatch.xpm $(kde_icondir)/large/kworldwatch.xpm
 	$(mkinstalldirs) $(kde_appsdir)/Utilities
 	$(INSTALL_DATA) $(srcdir)/KWorldWatch.kdelnk $(kde_appsdir)/Utilities
 
 uninstall-local:
 	rm -f $(kde_minidir)/kworldwatch.xpm
+	rm -f $(kde_icondir)/large/kworldwatch.xpm
 	rm -r $(kde_appsdir)/Utilities
 
 messages:
