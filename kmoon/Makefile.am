@@ -24,6 +24,7 @@ install-data-local:
 
 uninstall-local:
 	-rm -f $(kde_minidir)/kmoon.xpm
+	-rm -f $(kde_icondir)/large/kmoon.xpm
 
 SUBDIRS = pics icons
 
