@@ -18,6 +18,7 @@ Comment[is]=kworldwatch:  Heimskort og klukka
 Comment[no]=En klokke med verdenskart
 Comment[pt_BR]=RelСgio Mundial do KDE
 Comment[ru]=Часы с картой мира
+Comment[sk]=Hodinky s mapou sveta
 Exec=kworldwatch
 Icon=kworldwatch.xpm
 Type=Application

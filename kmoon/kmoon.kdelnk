@@ -9,6 +9,7 @@ Comment[is]=kmoon:  Sınir ástand tunglsins í spjaldinu
 Comment[no]=Månefaseindikator
 Comment[pt_BR]=Indicador de Fases da Lua
 Comment[ru]=éÎÄÉËÁÔÏÒ ÆÁÚ ÌÕÎÙ
+Comment[sk]=Indikátor fázy mesiaca
 Name=MoonPhase
 Name[cs]=Mìsíèní fáze
 Name[de]=Mond
