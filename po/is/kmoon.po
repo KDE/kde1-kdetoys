@@ -30,7 +30,7 @@ msgstr ""
 "\n"
 "Tunglmyndir eftir Tim Beauchamp <timb@googol.com>\n"
 "\n"
-"Íslensk þýðing eftir Bjarna <bre@mmedia.is>\n"
+"Íslensk þýðing eftir Bjarna <bre@mmedia.is>"
 
 #: kmoon.cpp:175
 #, c-format
