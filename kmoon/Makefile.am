@@ -17,5 +17,5 @@ kmoon.moc: kmoon.h
 SUBDIRS = pics
 
 messages:
-	@XGETTEXT@ -C -ki18n -x ../../kdelibs/po/kde.pot $(kmoon_SOURCES) && mv messages.po ../po/kmoon.pot
+	@XGETTEXT@ -C -ki18n -x $(includedir)/kde.pot $(kmoon_SOURCES) && mv messages.po ../po/kmoon.pot
 
