@@ -3,8 +3,10 @@
 Comment[es]=Visor Mundial de KDE
 Comment[de]=KDE Weltzeit-Uhr
 Comment[fi]=Näyttää kansainvälisen ajan
+Comment[pt_BR]=Relógio Mundial do KDE
 Name=World Watch
 Name[es]=Visor Mundial
+Name[pt_BR]=Relógio Mundial
 Name[de]=Weltzeit-Uhr
 Name[fi]=Maailmankello
 Comment=A clock with worldmap
