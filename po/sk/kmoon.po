@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-11 02:44+0100\n"
+"POT-Creation-Date: 1998-11-12 02:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Peter Ivanyi <ivanyi@internet.sk>Language-Team: Slovak "
 "<bednar@isternet.sk>\n"
