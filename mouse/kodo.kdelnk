@@ -1,0 +1,9 @@
+# KDE Config File  
+[KDE Desktop Entry]
+Type=Application
+Exec=kodo
+Icon=kodo.xpm
+DocPath=kodo/index.html
+Comment=Measure your Desktop Mileage!
+Terminal=0
+Name=Mouspedometa
