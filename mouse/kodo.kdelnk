@@ -7,6 +7,7 @@ DocPath=kodo/index.html
 Comment=Measure your Desktop Mileage!
 Comment[es]=Mida la longitud de su escritorio!
 Comment[fi]=Mittaa hiiren kulkema matka
+Comment[no]=Mål ditt skrivebords kjørelengde!
 Comment[pt_BR]=Meça sua quilometragem de Ambiente
 Terminal=0
 Name=Mouspedometa
