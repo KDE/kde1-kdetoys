@@ -7,7 +7,7 @@ config.h
 config.h.in
 stamp-h.in
 configure
-SUBDIRS
+subdirs
 configure.in
 stamp-h
 inst-apps
