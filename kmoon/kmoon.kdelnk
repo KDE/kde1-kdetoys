@@ -2,6 +2,7 @@
 [KDE Desktop Entry]
 Comment=Moon Phase Indicator
 Comment[cs]=Indikátor mìsíèní fáze
+Comment[da]=Viser månens faser
 Comment[de]=zeigt die Mondphasen im Panel an
 Comment[es]=Indicador de Fase Lunar
 Comment[fi]=Kuunvaiheennäyttäjä
@@ -15,6 +16,7 @@ Comment[sk]=Indikátor fázy mesiaca
 Comment[sv]=Visar månens faser
 Name=MoonPhase
 Name[cs]=Mìsíèní fáze
+Name[da]=Månefase
 Name[de]=Mond
 Name[es]=Fase Lunar
 Name[fi]=Kuunvaihe

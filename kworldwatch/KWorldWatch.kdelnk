@@ -2,6 +2,7 @@
 [KDE Desktop Entry]
 Name=World Watch
 Name[cs]=Svìtové hodiny
+Name[da]=Verdensur
 Name[de]=Weltzeit-Uhr
 Name[es]=Visor Mundial
 Name[fi]=Maailmankello
@@ -13,6 +14,7 @@ Name[ru]=íÉÒ
 Name[sv]=Världsklocka
 Comment=A clock with worldmap
 Comment[cs]=Hodiny s mapou svìta
+Comment[da]=Et ur med verdenskort
 Comment[de]=KDE Weltzeit-Uhr
 Comment[es]=Visor Mundial de KDE
 Comment[fi]=Näyttää kansainvälisen ajan
