@@ -2,10 +2,9 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: kmoon\n"
 "POT-Creation-Date: 1998-11-16 02:53+0100\n"
 "PO-Revision-Date: 1998-12-12 20:00+0200\n"
 "Last-Translator: Montel laurent <montell@club-internet.fr>\n"
@@ -39,4 +38,4 @@ msgstr ""
 #: kmoon.cpp:175
 #, c-format
 msgid "Moon is %d days old."
-msgstr "La lune est veille de %d jours."
+msgstr "La lune est vieille de %d jours."
