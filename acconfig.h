@@ -43,3 +43,7 @@
 
 /* Defines if you have libjpeg installed */
 #undef HAVE_LIBJPEG
+
+/* Define if compiled symbols have a leading underscore */
+#undef WITH_SYMBOL_UNDERSCORE
+
