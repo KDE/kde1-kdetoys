@@ -2,7 +2,7 @@
 static char*kmoon[]={
 "16 16 8 1",
 "a c #808080",
-"# c #a0a0a0",
+"# c #a0a0a4",
 "f c #6c6c6c",
 "c c #303030",
 ". c None",
