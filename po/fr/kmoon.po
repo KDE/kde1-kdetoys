@@ -36,7 +36,6 @@ msgstr ""
 "\n"
 "La représentation de la lune par Tim Beauchamp <timb@googol.com>"
 
-
 #: kmoon.cpp:175
 #, c-format
 msgid "Moon is %d days old."
