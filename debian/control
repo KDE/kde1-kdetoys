@@ -1,11 +1,11 @@
-Source: kdegames
+Source: kdetoys
 Section: contrib/games
 Priority: extra
-Maintainer: Stephan Kulow <coolo@kde.org>
+Maintainer: Stephan Kulow <coolo@kde.org> 
 Standards-Version: 2.3.0.0
 
-Package: kdegames
-Architecture: any
+Package: kdetoys
+Architecture: i386
 Depends: ${shlibs:Depends}, kdebase
-Description: KDE games collection
- This is a collection of several games written for kde.
+Description: some toys fo the KDE 
+ useless things you'll love :)
