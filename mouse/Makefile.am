@@ -43,13 +43,13 @@ messages:
 # if you have more of them, create a subdirectory with an extra Makefile 
 install-data-local: 
 	$(mkinstalldirs) $(APPSDIR)
-	$(INSTALL_DATA) kodo.kdelnk $(APPSDIR)
+	$(INSTALL_DATA) $(srcdir)/kodo.kdelnk $(APPSDIR)
 	$(mkinstalldirs) $(kde_datadir)/kodo
-	$(INSTALL_DATA) 57-2.gif $(kde_datadir)/kodo
+	$(INSTALL_DATA) $(srcdir)/57-2.gif $(kde_datadir)/kodo
 	$(mkinstalldirs) $(kde_icondir)
-	$(INSTALL_DATA) kodo.xpm $(kde_icondir)
+	$(INSTALL_DATA) $(srcdir)/kodo.xpm $(kde_icondir)
 	$(mkinstalldirs) $(kde_minidir)
-	$(INSTALL_DATA) mini-kodo.xpm $(kde_minidir)/kodo.xpm
+	$(INSTALL_DATA) $(srcdir)/mini-kodo.xpm $(kde_minidir)/kodo.xpm
 
 # remove ALL you have installed in install-data-local or install-exec-local
 uninstall-local:

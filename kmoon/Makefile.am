@@ -2,27 +2,22 @@
 bin_PROGRAMS = kmoon
 
 kmoon_LDFLAGS = $(all_libraries) $(KDE_RPATH)
-kmoon_LDADD =       -lm $(LIB_KDEUI)
+kmoon_LDADD =   $(LIB_KDEUI) -lm
 kmoon_SOURCES = kmoon.cpp phases.cpp
 noinst_HEADERS = kmoon.h
 
-DISTCLEANFILES = *.moc
-
 INCLUDES = $(all_includes)
 
-kmoon.cpp: kmoon.moc
-kmoon.moc: kmoon.h
-	$(MOC) -o kmoon.moc kmoon.h
+METASOURCES = kmoon.moc
 
-icondir = $(kde_icondir)
-icon_DATA = kmoon.xpm
+kde_icon_DATA = kmoon.xpm
 
 kdelnkdir = $(kde_appsdir)/Utilities
 kdelnk_DATA = kmoon.kdelnk
 
 install-data-local:
 	$(mkinstalldirs) $(kde_minidir)
-	$(INSTALL_DATA) mini-kmoon.xpm $(kde_minidir)/kmoon.xpm   
+	$(INSTALL_DATA) $(srcdir)/mini-kmoon.xpm $(kde_minidir)/kmoon.xpm   
 
 uninstall-local:
 	-rm -f $(kde_minidir)/kmoon.xpm
