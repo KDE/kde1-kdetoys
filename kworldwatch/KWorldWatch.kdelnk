@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=World Watch
+Name[ca]=Observatori mundial
 Name[cs]=Svìtové hodiny
 Name[da]=Verdensur
 Name[de]=Weltzeit-Uhr
@@ -13,6 +14,7 @@ Name[ro]=Ceas mondial
 Name[ru]=íÉÒ
 Name[sv]=Världsklocka
 Comment=A clock with worldmap
+Comment[ca]=Un rellotge amb un mapamundi
 Comment[cs]=Hodiny s mapou svìta
 Comment[da]=Et ur med verdenskort
 Comment[de]=KDE Weltzeit-Uhr
