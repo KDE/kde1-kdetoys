@@ -46,7 +46,7 @@ DISTCLEANFILES = $(kodo_METASOURCES)
 # make messages.po. Move this one to ../po/ and "make merge" in po
 # the -x is for skipping messages already translated in kdelibs
 messages:
-	$(XGETTEXT) -C -ki18n -x ../../../kdelibs/po/kde.pot $(kodo_SOURCES) && mv messages.po ../po/kodo.pot
+	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kodo_SOURCES) && mv messages.po ../po/kodo.pot
 
 # just install datas here. Use install-exec-local for scripts and etc.
 # the binary itself is already installed from automake

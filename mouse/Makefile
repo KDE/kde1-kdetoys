@@ -31,10 +31,10 @@ SHELL = /bin/sh
 
 srcdir = .
 top_srcdir = ..
-prefix = /opt/kde
+prefix = /home/coolo/prod/kde
 exec_prefix = ${prefix}
 
-bindir = /opt/kde/bin
+bindir = /home/coolo/prod/kde/bin
 sbindir = ${exec_prefix}/sbin
 libexecdir = ${exec_prefix}/libexec
 datadir = ${prefix}/share
@@ -49,9 +49,9 @@ oldincludedir = /usr/include
 
 DISTDIR =
 
-pkgdatadir = $(datadir)/kodo
-pkglibdir = $(libdir)/kodo
-pkgincludedir = $(includedir)/kodo
+pkgdatadir = $(datadir)/kdenonbeta
+pkglibdir = $(libdir)/kdenonbeta
+pkgincludedir = $(includedir)/kdenonbeta
 
 top_builddir = ..
 
@@ -83,20 +83,23 @@ CPP = gcc -E
 CXX = g++
 GLINC = @GLINC@
 GLLIB = @GLLIB@
-GMSGFMT = /usr/bin/msgfmt
+GMSGFMT = /home/coolo/bin/msgfmt
 IDL = @IDL@
 KDE_EXTRA_RPATH = 
-KDE_INCLUDES = -I/opt/kde/include
-KDE_LDFLAGS = -L/opt/kde/lib
-KDE_RPATH = -rpath $(kde_libraries) -rpath $(x_libraries)
+KDE_INCLUDES = -I/home/coolo/prod/kde/include
+KDE_LDFLAGS = -L/home/coolo/prod/kde/lib
+KDE_RPATH = -rpath $(kde_libraries) -rpath $(qt_libraries) -rpath $(x_libraries)
 LD = /usr/bin/ld
+LIBBSD = 
 LIBCOMPAT = 
 LIBCRYPT = -lcrypt
 LIBDL = @LIBDL@
-LIBJPEG = @LIBJPEG@
+LIBJPEG = -ljpeg
 LIBMICO = @LIBMICO@
 LIBOBJS = @LIBOBJS@
+LIBPTHREAD = @LIBPTHREAD@
 LIBPYTHON = @LIBPYTHON@
+LIBQIMGIO = @LIBQIMGIO@
 LIBSOCKET = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBUCB = 
@@ -104,47 +107,49 @@ LN_S = ln -s
 MAKEINFO = makeinfo
 MICO_INCLUDES = @MICO_INCLUDES@
 MICO_LDFLAGS = @MICO_LDFLAGS@
-MOC = /usr/bin/moc
-MSGFMT = /usr/bin/msgfmt
+MOC = /home/coolo/prod/qt/bin/moc
+MSGFMT = /home/coolo/bin/msgfmt
 NM = /usr/bin/nm -B
-PACKAGE = kodo
+PACKAGE = kdenonbeta
 PAMINC = @PAMINC@
 PAMLIBPATHS = @PAMLIBPATHS@
 PAMLIBS = @PAMLIBS@
 PYTHONINC = @PYTHONINC@
 PYTHONLIB = @PYTHONLIB@
-QT_INCLUDES = -I/usr/lib/qt/include
-QT_LDFLAGS = 
+QT_INCLUDES = -I/home/coolo/prod/qt/include
+QT_LDFLAGS = -L/home/coolo/prod/qt/lib
 RANLIB = ranlib
+TOPSUBDIRS =  kmoon kworldwatch mouse po
 USE_NLS = yes
 VERSION = 0.1
-XGETTEXT = /usr/bin/xgettext
+XGETTEXT = /home/coolo/bin/xgettext
 XPMINC = @XPMINC@
 XPMLIB = @XPMLIB@
 X_EXTRA_LIBS = 
 X_INCLUDES = -I/usr/X11R6/include
 X_LDFLAGS = -L/usr/X11R6/lib
-all_includes = -I/opt/kde/include -I/usr/lib/qt/include -I/usr/X11R6/include
-all_libraries = -L/opt/kde/lib -L/usr/X11R6/lib
+all_includes = -I/home/coolo/prod/kde/include -I/home/coolo/prod/qt/include -I/usr/X11R6/include
+all_libraries = -L/home/coolo/prod/kde/lib -L/home/coolo/prod/qt/lib -L/usr/X11R6/lib
 install_root = 
-kde_appsdir = /opt/kde/share/applnk
-kde_bindir = /opt/kde/bin
-kde_cgidir = /opt/kde/cgi-bin
-kde_confdir = /opt/kde/share/config
-kde_datadir = /opt/kde/share/apps
-kde_htmldir = /opt/kde/share/doc/HTML
-kde_icondir = /opt/kde/share/icons
-kde_includes = /opt/kde/include
-kde_libraries = /opt/kde/lib
-kde_locale = /opt/kde/share/locale
-kde_mimedir = /opt/kde/share/mimelnk
-kde_minidir = /opt/kde/share/icons/mini
-kde_partsdir = /opt/kde/parts
-kde_sounddir = /opt/kde/share/sounds
-kde_toolbardir = /opt/kde/share/toolbar
-kde_wallpaperdir = /opt/kde/share/wallpapers
-qt_includes = /usr/lib/qt/include
-qt_libraries = 
+kde_appsdir = /home/coolo/prod/kde/share/applnk
+kde_bindir = /home/coolo/prod/kde/bin
+kde_cgidir = /home/coolo/prod/kde/cgi-bin
+kde_confdir = /home/coolo/prod/kde/share/config
+kde_datadir = /home/coolo/prod/kde/share/apps
+kde_htmldir = /home/coolo/prod/kde/share/doc/HTML
+kde_icondir = /home/coolo/prod/kde/share/icons
+kde_includes = /home/coolo/prod/kde/include
+kde_libraries = /home/coolo/prod/kde/lib
+kde_locale = /home/coolo/prod/kde/share/locale
+kde_mimedir = /home/coolo/prod/kde/share/mimelnk
+kde_minidir = /home/coolo/prod/kde/share/icons/mini
+kde_partsdir = /home/coolo/prod/kde/parts
+kde_sounddir = /home/coolo/prod/kde/share/sounds
+kde_toolbardir = /home/coolo/prod/kde/share/toolbar
+kde_wallpaperdir = /home/coolo/prod/kde/share/wallpapers
+qt_includes = /home/coolo/prod/qt/include
+qt_libraries = /home/coolo/prod/qt/lib
+topdir = /home/coolo/prod/kdetoys
 x_includes = /usr/X11R6/include
 x_libraries = /usr/X11R6/lib
 
@@ -162,7 +167,7 @@ bin_PROGRAMS = 	kodo
 # Which sources should be compiled for kodo.
 kodo_SOURCES = kodo.cpp kimgnum.cpp gridbag.cpp
 
-kodo_METASOURCES = USE_AUTOMOC
+kodo_METASOURCES =  gridbag.moc.cpp kimgnum.moc.cpp kodo.moc.cpp 
 
 # the library search path. 
 kodo_LDFLAGS = $(all_libraries) $(KDE_RPATH)
@@ -188,11 +193,11 @@ PROGRAMS =  $(bin_PROGRAMS)
 
 DEFS = -DHAVE_CONFIG_H -I. -I$(srcdir) -I..
 CPPFLAGS = 
-LDFLAGS = -s
+LDFLAGS = 
 LIBS = 
 kodo_OBJECTS =  kodo.o kimgnum.o gridbag.o gridbag.moc.o kimgnum.moc.o kodo.moc.o 
 kodo_DEPENDENCIES = 
-CXXFLAGS = -O2 -Wall
+CXXFLAGS = -g -Wall
 CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
 LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
 CXXLINK = $(LIBTOOL) --mode=link $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@
@@ -207,6 +212,8 @@ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
 
 TAR = tar
 GZIP = --best
+DEP_FILES =  .deps/gridbag.P .deps/kimgnum.P .deps/kodo.P
+CXXMKDEP = $(CXX) -M $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
 SOURCES = $(kodo_SOURCES)
 OBJECTS = $(kodo_OBJECTS)
 
@@ -215,10 +222,10 @@ all: Makefile $(PROGRAMS) $(DATA) $(HEADERS)
 .SUFFIXES:
 .SUFFIXES: .S .c .cpp .lo .o .s
 $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4)
-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps kodo/Makefile
-	perl $(top_builddir)/automoc /home/armen/src/kodo-0.1/kodo/Makefile.in
+	cd $(top_srcdir) && $(AUTOMAKE) --gnu mouse/Makefile
+	perl $(top_builddir)/automoc /home/coolo/prod/kdetoys/mouse/Makefile.in
 
-Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status $(BUILT_SOURCES)
 	cd $(top_builddir) \
 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
@@ -248,9 +255,6 @@ uninstall-binPROGRAMS:
 	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
 	done
 
-.c.o:
-	$(COMPILE) -c $<
-
 .s.o:
 	$(COMPILE) -c $<
 
@@ -266,9 +270,6 @@ distclean-compile:
 	-rm -f *.tab.c
 
 maintainer-clean-compile:
-
-.c.lo:
-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
 
 .s.lo:
 	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
@@ -340,15 +341,55 @@ maintainer-clean-tags:
 
 distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
 
-subdir = kodo
+subdir = mouse
 
 distdir: $(DISTFILES)
+	here=`cd $(top_builddir) && pwd`; \
+	top_distdir=`cd $(top_distdir) && pwd`; \
+	distdir=`cd $(distdir) && pwd`; \
+	cd $(top_srcdir) \
+	  && $(AUTOMAKE) --include-deps --build-dir=$$here --srcdir-name=$(top_srcdir) --output-dir=$$top_distdir --gnu mouse/Makefile
 	@for file in $(DISTFILES); do \
 	  d=$(srcdir); \
 	  test -f $(distdir)/$$file \
 	  || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
 	  || cp -p $$d/$$file $(distdir)/$$file; \
 	done
+
+DEPS_MAGIC := $(shell mkdir .deps > /dev/null 2>&1 || :)
+
+-include $(DEP_FILES)
+
+mostlyclean-depend:
+
+clean-depend:
+
+distclean-depend:
+
+maintainer-clean-depend:
+	-rm -rf .deps
+
+%.o: %.c
+	@echo '$(COMPILE) -c $<'; \
+	$(COMPILE) -Wp,-MD,.deps/$(*F).P -c $<
+
+%.lo: %.c
+	@echo '$(LTCOMPILE) -c $<'; \
+	$(LTCOMPILE) -Wp,-MD,.deps/$(*F).p -c $<
+	@-sed -e 's/^\([^:]*\)\.o:/\1.lo \1.o:/' \
+	  < .deps/$(*F).p > .deps/$(*F).P
+	@-rm -f .deps/$(*F).p
+
+%.o: %.cpp
+	@echo '$(CXXCOMPILE) -c $<'; \
+	$(CXXCOMPILE) -Wp,-MD,.deps/$(*F).P -c $<
+
+%.lo: %.cpp
+	@echo '$(LTCXXCOMPILE) -c $<'; \
+	$(LTCXXCOMPILE) -Wp,-MD,.deps/$(*F).p -c $<
+	@-sed -e 's/^\([^:]*\)\.o:/\1.lo \1.o:/' \
+	  < .deps/$(*F).p > .deps/$(*F).P
+	@-rm -f .deps/$(*F).p
 info:
 dvi:
 check: all
@@ -386,20 +427,21 @@ maintainer-clean-generic:
 	-test -z "$(MAINTAINERCLEANFILES)" || rm -f $(MAINTAINERCLEANFILES)
 	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
 mostlyclean:  mostlyclean-binPROGRAMS mostlyclean-compile \
-		mostlyclean-libtool mostlyclean-tags \
+		mostlyclean-libtool mostlyclean-tags mostlyclean-depend \
 		mostlyclean-generic
 
 clean:  clean-binPROGRAMS clean-compile clean-libtool clean-tags \
-		clean-generic mostlyclean
+		clean-depend clean-generic mostlyclean
 
 distclean:  distclean-binPROGRAMS distclean-compile distclean-libtool \
-		distclean-tags distclean-generic clean
+		distclean-tags distclean-depend distclean-generic clean
 	-rm -f config.status
 	-rm -f libtool
 
 maintainer-clean:  maintainer-clean-binPROGRAMS maintainer-clean-compile \
 		maintainer-clean-libtool maintainer-clean-tags \
-		maintainer-clean-generic distclean
+		maintainer-clean-depend maintainer-clean-generic \
+		distclean
 	@echo "This command is intended for maintainers to use;"
 	@echo "it deletes files that may require special tools to rebuild."
 
@@ -409,7 +451,8 @@ mostlyclean-compile distclean-compile clean-compile \
 maintainer-clean-compile mostlyclean-libtool distclean-libtool \
 clean-libtool maintainer-clean-libtool uninstall-docDATA \
 install-docDATA tags mostlyclean-tags distclean-tags clean-tags \
-maintainer-clean-tags distdir info dvi installcheck install-exec \
+maintainer-clean-tags distdir mostlyclean-depend distclean-depend \
+clean-depend maintainer-clean-depend info dvi installcheck install-exec \
 install-data install uninstall all installdirs mostlyclean-generic \
 distclean-generic clean-generic maintainer-clean-generic clean \
 mostlyclean distclean maintainer-clean
@@ -418,7 +461,7 @@ mostlyclean distclean maintainer-clean
 # make messages.po. Move this one to ../po/ and "make merge" in po
 # the -x is for skipping messages already translated in kdelibs
 messages:
-	$(XGETTEXT) -C -ki18n -x ../../../kdelibs/po/kde.pot $(kodo_SOURCES) && mv messages.po ../po/kodo.pot
+	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kodo_SOURCES) && mv messages.po ../po/kodo.pot
 
 # just install datas here. Use install-exec-local for scripts and etc.
 # the binary itself is already installed from automake

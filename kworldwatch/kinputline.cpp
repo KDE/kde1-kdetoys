@@ -15,7 +15,7 @@ KInputLine::KInputLine(QWidget *parent, QString text, QString init)
   if (label->width() > width)
     width = label->width();
 
-  ok = new QPushButton(kapp->i18n("&Ok"), this);
+  ok = new QPushButton(kapp->i18n("&OK"), this);
   cancel = new QPushButton(kapp->i18n("&Cancel"), this);
   ok->adjustSize();
   cancel->adjustSize();

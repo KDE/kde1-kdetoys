@@ -38,3 +38,7 @@ uninstall-local:
 	rm -f $(ICONSDIR)/kworldwatch.xpm
 	rm -f $(kde_minidir)/kworldwatch.xpm
 	rm -r $(kde_appsdir)/Utilities
+
+messages:
+	$(XGETTEXT) -C -ki18n -ktranslate -x $(includedir)/kde.pot $(kworldwatch_SOURCES) && mv messages.po ../po/kworldwatch.pot
+
