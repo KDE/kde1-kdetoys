@@ -3,15 +3,17 @@
 # I used much code from Janos Farkas
 
 dnl Process this file with autoconf to produce a configure script.
-
 AC_INIT(acinclude.m4) dnl a source file from your sub dir
+
+dnl This is so we can use kde-common
+AC_CONFIG_AUX_DIR(admin)
 
 dnl AC_MSG_WARN("This Code is alpha. It may not even compile.  Use at your own risk.")
 AC_CANONICAL_SYSTEM 
 AC_ARG_PROGRAM
 
 dnl Automake doc recommends to do this only here. (Janos)
-AM_INIT_AUTOMAKE(kdenonbeta, 0.1) dnl searches for some needed programs
+AM_INIT_AUTOMAKE(kdetoys, 0.1) dnl searches for some needed programs
 
 dnl make $KDEDIR the default for the installation
 AC_PREFIX_DEFAULT(${KDEDIR:-/usr/local/kde})
