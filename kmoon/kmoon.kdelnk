@@ -1,0 +1,9 @@
+# KDE Config File
+[KDE Desktop Entry]
+Comment=Moon Phase Indicator
+Comment[de]=zeigt die Mondphasen im Panel an
+Name=MoonPhase
+Name[de]=Mond
+Exec=kmoon
+Icon=kmoon.xpm
+Type=Application
