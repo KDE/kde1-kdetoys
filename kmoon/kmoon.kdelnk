@@ -1,11 +1,13 @@
 # KDE Config File
 [KDE Desktop Entry]
 Comment=Moon Phase Indicator
+Comment[cs]=Indikátor mìsíèní fáze
 Comment[de]=zeigt die Mondphasen im Panel an
 Comment[es]=Indicador de Fase Lunar
 Comment[fi]=Kuunvaiheennäyttäjä
 Comment[pt_BR]=Indicador de Fases da Lua
 Name=MoonPhase
+Name[cs]=Mìsíèní fáze
 Name[de]=Mond
 Name[es]=Fase Lunar
 Name[fi]=Kuunvaihe
