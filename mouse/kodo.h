@@ -105,9 +105,9 @@ class Kodometer : public AnPanel
     Q_OBJECT
 public:
 
-    const double speedInterval=500.0;
-    const double distanceInterval=10.0;
-    const int speedSamples=10;
+    const double speedInterval;
+    const double distanceInterval;
+    const int speedSamples;
     
     Kodometer(QWidget* ,const char* );
     ~Kodometer() {}

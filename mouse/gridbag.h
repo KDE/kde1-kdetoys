@@ -66,13 +66,13 @@ public:
      */
     Insets(int top, int left, int bottom, int right);
 
-    Insets(Insets& i);
+    Insets(const Insets& i);
 
     Insets();
 
-    Insets& operator=(Insets& i);
+    Insets& operator=(const Insets& i);
 
-    void copy(Insets& i);
+    void copy(const Insets& i);
 
     void set(int t,int l,int b,int r) {
 	top=t;
@@ -84,29 +84,16 @@ public:
 
 
 
-#define max(a,b) ((a)>(b)?(a):(b))
-
 class GridBagConstraints
 {
 public:
  
-    const int RELATIVE = -1;
-    const int REMAINDER = 0;
+    const int RELATIVE;
+
+    enum { NONE = 0, BOTH, HORIZONTAL, VERTICAL };
  	   
-    const int NONE = 0;
-    const int BOTH = 1;
-    const int HORIZONTAL = 2;
-    const int VERTICAL = 3;
- 	   
-    const int CENTER = 10;
-    const int NORTH = 11;
-    const int NORTHEAST = 12;
-    const int EAST = 13;
-    const int SOUTHEAST = 14;
-    const int SOUTH = 15;
-    const int SOUTHWEST = 16;
-    const int WEST = 17;
-    const int NORTHWEST = 18;
+    enum { CENTER = 10, NORTH, NORTHEAST, EAST, SOUTHEAST,
+	   SOUTH, SOUTHWEST, WEST, NORTHWEST };
  
     int gridx, gridy, gridwidth, gridheight;
     float weightx, weighty;
@@ -120,11 +107,11 @@ public:
 
     GridBagConstraints();
  
-    GridBagConstraints(GridBagConstraints& c);
+    GridBagConstraints(const GridBagConstraints& c);
 
-    void copy(GridBagConstraints& c);
+    void copy(const GridBagConstraints& c);
 
-    GridBagConstraints& operator=(GridBagConstraints& c);
+    GridBagConstraints& operator=(const GridBagConstraints& c);
 };
 
 
@@ -238,9 +225,9 @@ public:
     
 //protected:
  
-    const int MAXGRIDSIZE = 128;
-    const int MINSIZE = 1;
-    const int PREFERREDSIZE = 2;
+    const int MAXGRIDSIZE;
+    const int MINSIZE;
+    const int PREFERREDSIZE;
 
     QDict<GridPair > comptable;
  

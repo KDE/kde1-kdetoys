@@ -44,18 +44,18 @@ Insets::Insets()
     right = 0;
 }
 
-Insets::Insets(Insets& i) {
+Insets::Insets(const Insets& i) {
     copy(i);
 }
 
-Insets& Insets::operator=(Insets& i)
+Insets& Insets::operator=(const Insets& i)
 {
     copy(i);
 
     return (*this);
 }
 
-void Insets::copy(Insets& i)
+void Insets::copy(const Insets& i)
 {
     top=i.top;
     bottom=i.bottom;
@@ -65,10 +65,8 @@ void Insets::copy(Insets& i)
 
 
 
-// #define max(a,b) (a>b?a:b)
-
-
 GridBagConstraints::GridBagConstraints()
+  : RELATIVE(-1)
 {
     gridx = RELATIVE;
     gridy = RELATIVE;
@@ -90,19 +88,19 @@ GridBagConstraints::GridBagConstraints()
     tempHeight=0;
 }
 
-GridBagConstraints::GridBagConstraints(GridBagConstraints& c)
+GridBagConstraints::GridBagConstraints(const GridBagConstraints& c)
 {
     copy(c);
 }
 
-GridBagConstraints& GridBagConstraints::operator=(GridBagConstraints& c)
+GridBagConstraints& GridBagConstraints::operator=(const GridBagConstraints& c)
 {
     copy(c);
 
     return (*this);
 }
 
-void GridBagConstraints::copy(GridBagConstraints& c)
+void GridBagConstraints::copy(const GridBagConstraints& c)
 {
     gridx=c.gridx;
     gridy=c.gridy;
@@ -162,6 +160,10 @@ ostream& operator<<(ostream& out, GridBagLayoutInfo& in)
  * Creates a gridbag layout.
  */
 GridBagLayout::GridBagLayout(Insets i)
+  : MAXGRIDSIZE(128),
+    MINSIZE(1),
+    PREFERREDSIZE(2)
+
 {
 
     containerInsets=i;
@@ -454,7 +456,7 @@ GridBagLayoutInfo* GridBagLayout::GetLayoutInfo(QWidget* , int)
 	if (curX < 0) {
 	    px = 0;
 	    for (i = curY; i < (curY + curHeight); i++)
-		px = max(px, xMax[i]);
+		px = QMAX(px, xMax[i]);
 	
 	    curX = px - curX - 1;
 	    if(curX < 0)
@@ -463,7 +465,7 @@ GridBagLayoutInfo* GridBagLayout::GetLayoutInfo(QWidget* , int)
 	else if (curY < 0) {
 	    py = 0;
 	    for (i = curX; i < (curX + curWidth); i++)
-		py = max(py, yMax[i]);
+		py = QMAX(py, yMax[i]);
 	
 	    curY = py - curY - 1;
 	    if(curY < 0)
@@ -562,7 +564,7 @@ GridBagLayoutInfo* GridBagLayout::GetLayoutInfo(QWidget* , int)
 	
 	    px = 0;
 	    for (i = curY; i < (curY + curHeight); i++)
-		px = max(px, xMax[i]);
+		px = QMAX(px, xMax[i]);
 	
 	    curX = px - curX - 1;
 	    if(curX < 0)
@@ -577,7 +579,7 @@ GridBagLayoutInfo* GridBagLayout::GetLayoutInfo(QWidget* , int)
 	
 	    py = 0;
 	    for (i = curX; i < (curX + curWidth); i++)
-		py = max(py, yMax[i]);
+		py = QMAX(py, yMax[i]);
 	
 	    curY = py - curY - 1;
 	    if(curY < 0)

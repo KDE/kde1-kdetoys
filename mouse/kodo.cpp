@@ -121,7 +121,10 @@
  * to make clicks on them bring up the context-menu.
  */
 Kodometer::Kodometer(QWidget* parent,const char* name)
-    : AnPanel(parent,name)
+    : AnPanel(parent,name),
+      speedInterval(500.0),
+      distanceInterval(10.0),
+      speedSamples(10)
 {
     debug        = 0;
 
