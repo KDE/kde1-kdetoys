@@ -15,7 +15,7 @@ msgstr ""
 
 #: kmoon.cpp:111
 msgid "About Moon Phase Indicator"
-msgstr "Om Månefase indikator"
+msgstr "Om Månefaseindikator"
 
 #: kmoon.cpp:112
 msgid ""
@@ -27,7 +27,7 @@ msgid ""
 "\n"
 "Moon graphics by Tim Beauchamp <timb@googol.com>"
 msgstr ""
-"Månefase indikator for KDE\n"
+"Månefaseindikator for KDE\n"
 "\n"
 "Skrevet av Stephan Kulow <coolo@kde.org>\n"
 "\n"
