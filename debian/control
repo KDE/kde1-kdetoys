@@ -1,7 +1,7 @@
 Source: kdetoys
 Section: contrib/games
 Priority: extra
-Maintainer: Patricia Jung <trish@freiburg.linux.de>
+Maintainer: Stephan Kulow <coolo@kde.org>
 Standards-Version: 2.3.0.0
 
 Package: kdetoys
