@@ -1,11 +1,11 @@
 Source: kdetoys
 Section: contrib/games
 Priority: extra
-Maintainer: Stephan Kulow <coolo@kde.org> 
+Maintainer: Patricia Jung <trish@freiburg.linux.de>
 Standards-Version: 2.3.0.0
 
 Package: kdetoys
 Architecture: i386
 Depends: ${shlibs:Depends}, kdebase
-Description: some toys fo the KDE 
+Description: some toys for the KDE 
  useless things you'll love :)
