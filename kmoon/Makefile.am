@@ -10,19 +10,22 @@ INCLUDES = $(all_includes)
 
 METASOURCES = kmoon.moc
 
-kde_icon_DATA = kmoon.xpm
-
 kdelnkdir = $(kde_appsdir)/Utilities
 kdelnk_DATA = kmoon.kdelnk
 
+kde_icon_DATA = kmoon.xpm
+
 install-data-local:
 	$(mkinstalldirs) $(kde_minidir)
-	$(INSTALL_DATA) $(srcdir)/mini-kmoon.xpm $(kde_minidir)/kmoon.xpm   
+	$(mkinstalldirs) $(kde_icondir)
+	$(mkinstalldirs) $(kde_icondir)/large
+	$(INSTALL_DATA) $(srcdir)/mini-kmoon.xpm $(kde_minidir)/kmoon.xpm
+	$(INSTALL_DATA) $(srcdir)/large-kmoon.xpm $(kde_icondir)/large/kmoon.xpm
 
 uninstall-local:
 	-rm -f $(kde_minidir)/kmoon.xpm
 
-SUBDIRS = pics
+SUBDIRS = pics icons
 
 messages:
 	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kmoon_SOURCES) && mv messages.po ../po/kmoon.pot
