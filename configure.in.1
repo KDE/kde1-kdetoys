@@ -45,12 +45,7 @@ AC_CHECK_HEADERS(fcntl.h sys/time.h unistd.h sys/types.h sys/stat.h)
 AC_CHECK_HEADERS(sys/cdefs.h fnmatch.h sysent.h strings.h paths.h)
 AC_CHECK_HEADERS(utmp.h sys/param.h linux/tcp.h sys/proc.h)
 
-AC_HAVE_GL([], DO_NOT_COMPILE="$DO_NOT_COMPILE kglchess")
 AC_FIND_JPEG
-
-if test "$ac_cv_header_linux_tcp_h" = "no"; then
- DO_NOT_COMPILE="$DO_NOT_COMPILE kpm"
-fi
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_HEADER_TIME
@@ -60,7 +55,6 @@ AC_CHECK_BOOL
 AC_C_LONG_DOUBLE  
 
 dnl Checks for library functions.
-KDE_CHECK_DLOPEN
 AC_CHECK_FUNCS(socket fabsl strdup vsnprintf) 
 AC_CHECK_SETENV
 AC_CHECK_GETDOMAINNAME
@@ -73,5 +67,3 @@ AC_SUBST(topdir)
 dnl Perform program name transformation
 AC_ARG_PROGRAM
 
-
-DO_NOT_COMPILE="$DO_NOT_COMPILE lnk"
