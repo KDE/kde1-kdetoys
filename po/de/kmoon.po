@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kmoon\n"
-"POT-Creation-Date: 1998-11-14 02:47+0100\n"
+"POT-Creation-Date: 1998-11-15 02:43+0100\n"
 "PO-Revision-Date: 1998-03-14 17:01+0100\n"
 "Last-Translator: Stephan Kulow <coolo@kde.org>\n"
 
