@@ -1,15 +1,13 @@
 # KDE Config File
 [KDE Desktop Entry]
-Comment[C]=KDE World Wide Watch
 Comment[es]=Visor Mundial de KDE
 Comment[de]=KDE Weltzeit-Uhr
 Comment[fi]=N‰ytt‰‰ kansainv‰lisen ajan
-Name[C]=World Watch
+Name=World Watch
 Name[es]=Visor Mundial
 Name[de]=Weltzeit-Uhr
 Name[fi]=Maailmankello
 Comment=A clock with worldmap
-Comment[de]=Eine Weltzeit-Uhr
 Exec=kworldwatch
 Icon=kworldwatch.xpm
 Type=Application
