@@ -18,7 +18,7 @@ msgstr ""
 
 #: toplevel.cpp:52
 msgid "Local time: %x, %H:%M:%S"
-msgstr "Localno vrijeme %x, %H:%M:%S"
+msgstr "Lokalno vrijeme %x, %H:%M:%S"
 
 #: toplevel.cpp:55
 msgid "  GMT Time: %x, %H:%M:%S"
@@ -30,27 +30,27 @@ msgstr "&Dodaj zastavicu"
 
 #: world.cpp:71
 msgid "&Delete nearest flag"
-msgstr ""
+msgstr "&Obri¹i najbli¾u zastavicu"
 
 #: world.cpp:72
 msgid "A&nnotate flag..."
-msgstr ""
+msgstr "O&bilje¾i zastavicu..."
 
 #: world.cpp:74
 msgid "Toggle &Illumination"
-msgstr ""
+msgstr "Uklj./Isklj. os&vijetljenost"
 
 #: world.cpp:75
 msgid "Toggle &Simulation"
-msgstr ""
+msgstr "Uklj./Isklj. &simulaciju"
 
 #: world.cpp:77
 msgid "About &World Watch..."
-msgstr ""
+msgstr "O &World Watch..."
 
 #: world.cpp:264
 msgid "About KDE World Watch"
-msgstr ""
+msgstr "O KDE World Watch"
 
 #: world.cpp:282
 msgid ""
@@ -59,11 +59,15 @@ msgid ""
 "written by Matthias Hölzer\n"
 "(hoelzer@physik.uni-wuerzburg.de)"
 msgstr ""
+"KDE World Wide Watch\n"
+"\n"
+"napisao Matthias Hölzer\n"
+"(hoelzer@physik.uni-wuerzburg.de)"
 
 #: world.cpp:442
 msgid "Annotation"
-msgstr ""
+msgstr "Bilje¹ka"
 
 #: world.cpp:443
 msgid "Annotate the nearest flag"
-msgstr ""
+msgstr "Obilje¾i nabli¾u zastavicu"
