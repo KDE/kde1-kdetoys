@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kmoon\n"
-"POT-Creation-Date: 1998-11-05 02:38+0100\n"
+"POT-Creation-Date: 1998-11-16 02:53+0100\n"
 "PO-Revision-Date: 1998-03-25 20:00+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt\n"
 "MIME-Version:\n"
 "Content-Type:\n"
 "Content-Transfer-Encoding:\n"
- 
+
 #: kmoon.cpp:111
 msgid "About Moon Phase Indicator"
 msgstr "Acerca do Indicador de Fase Lunar"
