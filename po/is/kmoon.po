@@ -28,7 +28,9 @@ msgstr ""
 "\n"
 "Reikniverk eftir Chris Osburn <chris@speakeasy.org>\n"
 "\n"
-"Tunglmyndir eftir Tim Beauchamp <timb@googol.com>"
+"Tunglmyndir eftir Tim Beauchamp <timb@googol.com>\n"
+"\n"
+"Íslensk þýðing eftir Bjarna <bre@mmedia.is>\n"
 
 #: kmoon.cpp:175
 #, c-format

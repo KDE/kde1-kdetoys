@@ -58,7 +58,9 @@ msgstr ""
 "Heimsklukkan\n"
 "\n"
 "eftir Matthias Hölzer\n"
-"(hoelzer@physik.uni-wuerzburg.de)"
+"(hoelzer@physik.uni-wuerzburg.de)\n"
+"\n"
+"Þýðing: Bjarni <bre@mmedia.is>"
 
 #: world.cpp:442
 msgid "Annotation"
