@@ -5,7 +5,7 @@ Maintainer: Stephan Kulow <coolo@kde.org>
 Standards-Version: 2.3.0.0
 
 Package: kdetoys
-Architecture: i386
+Architecture: any
 Depends: ${shlibs:Depends}, kdebase
 Description: some toys for the KDE 
  useless things you'll love :)

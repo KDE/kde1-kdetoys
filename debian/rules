@@ -13,6 +13,7 @@ $(BUILDDIR)/build-stamp:
 	  $(MAKE) -f admin/Makefile.common ;\
 	fi 
 	test -d $(BUILDDIR) || mkdir $(BUILDDIR) ;\
+	cp -R po $(BUILDDIR) ;\
 	cd $(BUILDDIR) ;\
 	CXXFLAGS="-g -O2 -Wall" \
 	  ../configure --with-install-root=`pwd`/../debian/tmp \
@@ -44,7 +45,7 @@ binary-arch: build
 	make -C $(BUILDDIR) install
 	perl -w debian/kderules
 	dh_movefiles
-	dh_undocumented 
+	dh_undocumented `cat debian/man-pages`
 	dh_installdocs
 	dh_installchangelogs
 	dh_strip
