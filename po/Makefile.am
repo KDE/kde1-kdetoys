@@ -1,6 +1,6 @@
 # $Id$
 
-SUBDIRS = cs de hr no pt sk zh_CN.GB2312 is fi
+SUBDIRS = cs de hr no pt sk zh_CN.GB2312 is fi fr
 
 # this is a general list for merging!
 APPS = kmoon
