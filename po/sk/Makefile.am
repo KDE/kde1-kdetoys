@@ -1,6 +1,6 @@
 
 # This has to be set. The rest should be reusable
-GMOFILES = kmoon.gmo
+GMOFILES = kmoon.gmo kworldwatch.gmo
 POFILES = $(GMOFILES:.gmo=.po)
 
 LANG = sk
