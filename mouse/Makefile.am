@@ -50,12 +50,15 @@ install-data-local:
 	$(INSTALL_DATA) $(srcdir)/kodo.xpm $(kde_icondir)
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA) $(srcdir)/mini-kodo.xpm $(kde_minidir)/kodo.xpm
+	$(mkinstalldirs) $(kde_icondir)/large
+	$(INSTALL_DATA) $(srcdir)/large-kodo.xpm $(kde_icondir)/large/kodo.xpm
 
 # remove ALL you have installed in install-data-local or install-exec-local
 uninstall-local:
 	-rm -f $(APPSDIR)/kodo.kdelnk
 	-rm -f $(kde_icondir)/kodo.xpm
 	-rm -f $(kde_minidir)/kodo.xpm
+	-rm -f $(kde_icondir)/large/kodo.xpm
 
 
 doc_DATA = index.html logotp3.gif guide.gif
