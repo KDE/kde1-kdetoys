@@ -3,7 +3,7 @@ INCLUDES= $(all_includes)
 CLEANFILES = $(BUILT_SOURCES)
 bin_PROGRAMS = kworldwatch
 LDFLAGS = $(all_libraries) $(KDE_RPATH)
-LDADD = -lkfm -lkdeui -lkdecore -lqt -lXext $(LIBSOCKET) 
+LDADD = -lkfm -lkdeui -lkdecore -lXext $(LIB_QT) 
 
 ICONSDIR=$(kde_icondir)
 
