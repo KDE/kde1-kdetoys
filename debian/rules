@@ -16,7 +16,7 @@ $(BUILDDIR)/build:
 	test -d $(BUILDDIR) || mkdir $(BUILDDIR) ;\
 	cd $(BUILDDIR) ;\
 	CXXFLAGS="-g -O2 -Wall" \
-	  $pwd/configure --with-install-root=`pwd`/debian/tmp \
+	  $$pwd/configure --with-install-root=`pwd`/debian/tmp \
 	  --enable-debug --disable-rpath && make
  
 	touch $(BUILDDIR)/build
