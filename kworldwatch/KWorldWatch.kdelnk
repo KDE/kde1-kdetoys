@@ -2,8 +2,10 @@
 [KDE Desktop Entry]
 Comment[C]=KDE World Wide Watch
 Comment[de]=KDE Weltzeit-Uhr
+Comment[fi]=N‰ytt‰‰ kansainv‰lisen ajan
 Name[C]=World Watch
 Name[de]=Weltzeit-Uhr
+Name[fi]=Maailmankello
 Comment=A clock with worldmap
 Comment[de]=Eine Weltzeit-Uhr
 Exec=kworldwatch

@@ -5,5 +5,7 @@ Exec=kodo
 Icon=kodo.xpm
 DocPath=kodo/index.html
 Comment=Measure your Desktop Mileage!
+Comment[fi]=Mittaa hiiren kulkema matka
 Terminal=0
 Name=Mouspedometa
+Name[fi]=Hiirimittari

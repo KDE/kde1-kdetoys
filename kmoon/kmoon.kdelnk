@@ -2,8 +2,10 @@
 [KDE Desktop Entry]
 Comment=Moon Phase Indicator
 Comment[de]=zeigt die Mondphasen im Panel an
+Comment[fi]=Kuunvaiheennäyttäjä
 Name=MoonPhase
 Name[de]=Mond
+Name[fi]=Kuunvaihe
 Exec=kmoon
 Icon=kmoon.xpm
 Type=Application
