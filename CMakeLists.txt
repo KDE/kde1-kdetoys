@@ -23,6 +23,6 @@ if (CMAKE_COMPILER_IS_GNUCXX)
 endif()
 
 add_subdirectory(kmoon)
-#add_subdirectory(kworldwatch)
+add_subdirectory(kworldwatch)
 #add_subdirectory(mouse)
 #add_subdirectory(po)
