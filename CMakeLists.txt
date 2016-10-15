@@ -22,7 +22,7 @@ if (CMAKE_COMPILER_IS_GNUCXX)
     set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--no-undefined")
 endif()
 
-#add_subdirectory(kmoon)
+add_subdirectory(kmoon)
 #add_subdirectory(kworldwatch)
 #add_subdirectory(mouse)
 #add_subdirectory(po)
