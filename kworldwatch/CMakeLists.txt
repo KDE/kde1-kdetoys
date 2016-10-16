@@ -20,5 +20,5 @@ target_link_libraries(kworldwatch
 )
 
 install(TARGETS kworldwatch RUNTIME DESTINATION ${KDE1_BINDIR})
-install(FILES KWorldWatch.kdelnk KWorldWatch.kdelnk DESTINATION ${KDE1_DATADIR}/kpanel/default)
+install(FILES KWorldWatch.kdelnk DESTINATION ${KDE1_DATADIR}/kpanel/default)
 install_icon(kworldwatch.xpm)

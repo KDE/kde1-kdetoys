@@ -24,5 +24,5 @@ endif()
 
 add_subdirectory(kmoon)
 add_subdirectory(kworldwatch)
-#add_subdirectory(mouse)
+add_subdirectory(mouse)
 #add_subdirectory(po)
