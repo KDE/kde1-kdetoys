@@ -21,3 +21,7 @@ install(TARGETS kodo RUNTIME DESTINATION ${KDE1_BINDIR})
 install(FILES kodo.kdelnk DESTINATION ${KDE1_DATADIR}/kpanel/default)
 install_icon(kodo.xpm)
 install_icon(57-2.gif "${KDE1_DATADIR}/kodo")
+
+install(FILES
+    index.html logotp3.gif guide.gif
+    DESTINATION ${KDE1_HTMLDIR}/en/kodo )
