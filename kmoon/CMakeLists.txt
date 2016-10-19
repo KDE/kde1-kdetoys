@@ -20,5 +20,5 @@ target_link_libraries(kmoon
 )
 
 install(TARGETS kmoon RUNTIME DESTINATION ${KDE1_BINDIR})
-install(FILES kmoon.kdelnk DESTINATION ${KDE1_DATADIR}/kpanel/default)
+install(FILES kmoon.kdelnk DESTINATION ${KDE1_APPSDIR}/Utilities)
 install_icon(kmoon.xpm)

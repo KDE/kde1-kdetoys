@@ -18,7 +18,7 @@ target_link_libraries(kodo
 )
 
 install(TARGETS kodo RUNTIME DESTINATION ${KDE1_BINDIR})
-install(FILES kodo.kdelnk DESTINATION ${KDE1_DATADIR}/kpanel/default)
+install(FILES kodo.kdelnk DESTINATION ${KDE1_APPSDIR}/Utilities)
 install_icon(kodo.xpm)
 install_icon(57-2.gif "${KDE1_DATADIR}/kodo")
 
