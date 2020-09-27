@@ -359,6 +359,7 @@ void GridBagLayout::preferredLayoutSize(QWidget* parent,QSize* dim)
     
     (*dim)=(*d);
     
+    delete d;
     delete info;
 }
 
@@ -530,7 +531,9 @@ GridBagLayoutInfo* GridBagLayout::GetLayoutInfo(QWidget* , int)
      */
     
     curRow = curCol = -1;
+    delete[] xMax;
     xMax = new int[MAXGRIDSIZE];
+    delete[] yMax;
     yMax = new int[MAXGRIDSIZE];
 
 
@@ -918,6 +921,7 @@ void GridBagLayout::ArrangeGrid(QWidget* parent)
     if (d->width() < parent->width() || d->height() < parent->height()) {
 	delete info;
 	info = GetLayoutInfo(parent, MINSIZE);
+        delete d;
 	d = GetMinSize(parent, info);
     }
 
@@ -1049,6 +1053,7 @@ void GridBagLayout::ArrangeGrid(QWidget* parent)
     }
 
     delete info;
+    delete d;
 }
 
 

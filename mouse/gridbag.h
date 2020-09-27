@@ -149,6 +149,13 @@ public:
 	memset(weightY,0,sizeof(int)*MAXGRIDSIZE);
     }
 
+    ~GridBagLayoutInfo()
+    {
+        delete[] minWidth;
+        delete[] minHeight;
+        delete[] weightX;
+        delete[] weightY;
+    }
 
 };
 
