@@ -203,6 +203,7 @@ GridBagLayout::~GridBagLayout()
 	p=it.current();
 	delete p->second;
 	delete p;
+        ++it;
     }
 }
 
