@@ -405,7 +405,7 @@ GridBagLayoutInfo* GridBagLayout::GetLayoutInfo(QWidget* , int)
     GridBagLayoutInfo* r = new GridBagLayoutInfo();
     QWidget* comp=NULL;;
     GridBagConstraints* constraints=NULL;;
-    QSize* d=NULL;
+    QSize d;
 
     int i=0, k=0, px=0, py=0, pixels_diff=0, nextSize=0;
     int curX=0, curY=0, curWidth=0, curHeight=0, curRow=0, curCol=0;
@@ -487,13 +487,13 @@ GridBagLayoutInfo* GridBagLayout::GetLayoutInfo(QWidget* , int)
 //	    d = &comp->maximumSize();
 //	else
 
-	d = &comp->sizeHint();
+	d = comp->sizeHint();
 //	cout << "preferred For widget: " << comp->name() << ", "
-//	     << d->width() <<"," << d->height() << endl;
+//	     << d.width() <<"," << d.height() << endl;
 	
 	    
-	constraints->minWidth = d->width();
-	constraints->minHeight = d->height();
+	constraints->minWidth = d.width();
+	constraints->minHeight = d.height();
       
 	/* Zero width and height must mean that this is the last item (or
 	 * else something is wrong). */
@@ -786,8 +786,8 @@ GridBagLayoutInfo* GridBagLayout::GetLayoutInfo(QWidget* , int)
 	    
     }
 
-    delete yMax;
-    delete xMax;
+    delete[] yMax;
+    delete[] xMax;
     
     return r;
 }
